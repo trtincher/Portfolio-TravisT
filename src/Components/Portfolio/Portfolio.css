@@ -6,10 +6,3 @@
 	font-family: 'Roboto', sans-serif;
 	border-top: .5rem solid #53add7;
 }
-
-#portfolioContent {
-	background-color: #53add7;
-	display: flex;
-	flex-direction: column;
-	padding: 1rem;
-}

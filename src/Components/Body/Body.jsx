@@ -4,7 +4,7 @@ import './Body.css';
 function Body() {
 	return (
 		<div id="contentGrid">
-			<div id="about" class="text-box">
+			<div id="about" className="text-box">
 				<h2>About</h2>
 				<p>
 					I’m a software engineer who builds user forward websites with an eye towards integrating function
@@ -17,27 +17,27 @@ function Body() {
 				<img src="https://i.imgur.com/WlPsHMX.jpg" alt="" />
 			</div>
 
-			<div id="skills" class="text-box">
+			<div id="skills" className="text-box">
 				<h2>Skills</h2>
 				<div id="skillsBody">
-					<div class="skillIcon">
-						<i class="fab fa-html5" />
+					<div className="skillIcon">
+						<i className="fab fa-html5" />
 						<h3>HTML</h3>
 					</div>
-					<div class="skillIcon">
-						<i class="fab fa-css3" />
+					<div className="skillIcon">
+						<i className="fab fa-css3" />
 						<h3>CSS</h3>
 					</div>
-					<div class="skillIcon">
-						<i class="fab fa-js" />
+					<div className="skillIcon">
+						<i className="fab fa-js" />
 						<h3>JS</h3>
 					</div>
-					<div class="skillIcon">
-						<i class="fas fa-dollar-sign" />
+					<div className="skillIcon">
+						<i className="fas fa-dollar-sign" />
 						<h3>jQuery</h3>
 					</div>
-					<div class="skillIcon">
-						<i class="fab fa-bootstrap" />
+					<div className="skillIcon">
+						<i className="fab fa-bootstrap" />
 						<h3>Bootstrap</h3>
 					</div>
 				</div>

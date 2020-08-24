@@ -1,16 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Nav.css';
 
 function Nav() {
 	const [ isOpen, setIsOpen ] = useState(false);
 
+	useEffect(() => {
+		handleResize();
+		window.addEventListener('resize', handleResize);
+	}, []);
+
 	const handleNavClick = () => {
 		setIsOpen(!isOpen);
 	};
 
+	const handleResize = () => {
+		if (window.innerWidth > 768) {
+			setIsOpen(true);
+		} else {
+			setIsOpen(false);
+		}
+	};
+
 	const navBar = (
-		<div class="navContainer">
-			<ul class="navBar">
+		<div className="navContainer">
+			<ul className={isOpen ? 'navBar' : 'hideNavBar'}>
 				<li>
 					<a href="#top">Home</a>
 				</li>
@@ -24,18 +37,30 @@ function Nav() {
 					<a href="#portfolioContainer">Portfolio</a>
 				</li>
 			</ul>
-			<div class="close" onClick={handleNavClick} />
+			<div className="close" onClick={handleNavClick} />
 		</div>
+	);
+
+	const hamburger = (
+		<button className="hamburger" onClick={handleNavClick}>
+			<span />
+			<span />
+			<span />
+		</button>
+	);
+
+	const times = (
+		<button className="times" onClick={handleNavClick}>
+			<span className="crossTop" />
+			<span className="crossMid" />
+			<span className="crossBottom" />
+		</button>
 	);
 
 	return (
 		<nav>
-			<button onClick={handleNavClick}>
-				<span />
-				<span />
-				<span />
-			</button>
-			{isOpen ? navBar : null}
+			{isOpen ? times : hamburger}
+			{navBar}
 		</nav>
 	);
 }

@@ -10,6 +10,22 @@ nav {
 	display: flex;
 }
 
+.hideNavBar {
+	position: fixed;
+	width: 60%;
+	background-color: rgba(241, 243, 211, .9);
+	color: black;
+	left: 0;
+	top: 0;
+	padding: 60px;
+	display: block;
+	height: 100vh;
+	left: -200vw;
+	transition: left 500ms ease;
+	box-sizing: border-box;
+	text-align: left;
+}
+
 .navBar {
 	position: fixed;
 	width: 60%;
@@ -25,18 +41,61 @@ nav {
 	box-sizing: border-box;
 	text-align: left;
 }
-nav button span {
+
+.hamburger span {
 	height: 2px;
 	width: 20px;
 	margin: 4px 0;
 	background-color: black;
 	display: block;
+	transition: all 500ms ease;
 }
+
+.times span {
+	height: 2px;
+	width: 20px;
+	background-color: black;
+	display: block;
+	transition: all 500ms ease;
+}
+
+.times {
+	margin-top: 1.5rem;
+}
+
+.crossMid {
+	padding: 0;
+	margin: 0;
+	position: relative;
+	top: 2px;
+	transform: rotate(-495deg);
+	transition: all 1s ease;
+}
+
+.crossTop {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: 4px;
+	transform: rotate(135deg);
+	transition: all 200ms ease;
+}
+
+.crossBottom {
+	padding: 0;
+	margin: 0;
+	transform: rotate(-135deg);
+	transition: all 700ms ease;
+}
+
 nav button {
+	position: fixed;
 	background-color: transparent;
 	margin: 1rem;
 	outline: 0;
 	border: 0;
+	z-index: 100;
+	transition: all 500ms ease;
 }
 nav > * {
 	text-align: center;
@@ -67,7 +126,7 @@ nav a {
 		margin: 0;
 	}
 
-	nav .left {
+	.navBar {
 		display: flex;
 		position: initial;
 		height: initial;
