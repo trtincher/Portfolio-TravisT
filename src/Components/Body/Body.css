@@ -1,0 +1,81 @@
+#contentGrid {
+	flex-direction: column;
+	font-size: .1rem;
+}
+
+#fillerImg1 img {
+	width: 100%;
+}
+
+#fillerImg2 img {
+	width: 100%;
+}
+
+#skillsBody {
+	display: flex;
+	margin: auto 2rem;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding-top: 1em;
+}
+.skillIcon {
+	font-size: .8em;
+	padding: .5em .3em;
+}
+
+.text-box {
+	text-align: center;
+	background-color: white;
+	padding-bottom: 2rem;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	padding: 1rem;
+	font-family: 'Roboto', sans-serif;
+	transition: all 400ms ease-in;
+}
+
+.text-box p {
+	font-family: 'Noto Sans JP', sans-serif;
+	text-transform: lowercase;
+	font-size: .9em;
+	padding-top: .5em;
+	line-height: 1.2em;
+	height: auto;
+}
+
+@media only screen and (min-width: 768px) {
+	#contentGrid {
+		display: grid;
+		grid-template-rows: repeat(4, 350px);
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#fillerImg1 {
+		position: relative;
+		overflow: hidden;
+		grid-row: 2/3;
+		grid-column: 2/3;
+	}
+
+	#fillerImg1 img {
+		position: relative;
+		width: 150%;
+	}
+
+	#skills {
+		grid-row: 3/4;
+		grid-column: 1/2;
+	}
+
+	#fillerImg2 {
+		position: relative;
+		overflow: hidden;
+		grid-row: 4/5;
+		grid-column: 2/3;
+	}
+
+	#fillerImg2 img {
+		position: relative;
+		width: 150%;
+	}
+}

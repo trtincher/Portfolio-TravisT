@@ -1,0 +1,87 @@
+nav {
+	position: fixed;
+	top: 0rem;
+	left: 0rem;
+	right: 0rem;
+	z-index: 10;
+}
+
+.navContainer {
+	display: flex;
+}
+
+.navBar {
+	position: fixed;
+	width: 60%;
+	background-color: rgba(241, 243, 211, .9);
+	color: black;
+	left: 0;
+	top: 0;
+	padding: 60px;
+	display: block;
+	height: 100vh;
+	left: 0vw;
+	transition: left 500ms ease;
+	box-sizing: border-box;
+	text-align: left;
+}
+nav button span {
+	height: 2px;
+	width: 20px;
+	margin: 4px 0;
+	background-color: black;
+	display: block;
+}
+nav button {
+	background-color: transparent;
+	margin: 1rem;
+	outline: 0;
+	border: 0;
+}
+nav > * {
+	text-align: center;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav a {
+	color: #53add7;
+	text-decoration: none;
+	font-size: 3rem;
+	line-height: 3.5rem;
+}
+
+.close {
+	width: 40%;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+@media only screen and (min-width: 768px) {
+	nav {
+		background-color: rgba(255, 255, 255, .97);
+		margin: 0;
+	}
+
+	nav .left {
+		display: flex;
+		position: initial;
+		height: initial;
+		padding: 0;
+		background-color: transparent;
+	}
+
+	nav button {
+		display: none;
+	}
+
+	nav a {
+		font-size: 2rem;
+		color: #5badd6;
+		padding-left: 2rem;
+	}
+}

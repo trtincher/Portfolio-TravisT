@@ -1,0 +1,26 @@
+#banner {
+	text-align: center;
+	font-size: 2rem;
+	color: rgb(85, 85, 85);
+	margin: 5rem auto 7rem auto;
+	padding: 0 2rem;
+	line-height: 3rem;
+}
+
+#banner h3 {
+	padding: 1rem 0;
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+#headshotBackground {
+	background-color: white;
+	text-align: center;
+}
+
+#headshot {
+	width: 10rem;
+	border: 2px solid white;
+	border-radius: 50%;
+	background-color: #53add7;
+}
