@@ -7,9 +7,9 @@ function Body() {
 			<div id="about" className="text-box">
 				<h2>About</h2>
 				<p>
-					I’m a software engineer who builds user forward websites with an eye towards integrating function
-					and design! I have a diverse background in philosophy, theology, art and beer, which has given me an
-					eye for aesthetic and a mind for productivity.
+					I’m a <span>Houston based</span> software developer who builds user forward websites with an eye
+					towards integrating function and design! I have a diverse background in philosophy, theology, art
+					and beer, which has given me an eye for aesthetic and a mind for the production cycle.
 				</p>
 			</div>
 
@@ -22,7 +22,7 @@ function Body() {
 				<div id="skillsBody">
 					<div className="skillIcon">
 						<i className="fab fa-html5" />
-						<h3>HTML</h3>
+						<h3>HTML5</h3>
 					</div>
 					<div className="skillIcon">
 						<i className="fab fa-css3" />
@@ -30,7 +30,7 @@ function Body() {
 					</div>
 					<div className="skillIcon">
 						<i className="fab fa-js" />
-						<h3>JS</h3>
+						<h3>Javascript</h3>
 					</div>
 					<div className="skillIcon">
 						<i className="fas fa-dollar-sign" />
@@ -39,6 +39,66 @@ function Body() {
 					<div className="skillIcon">
 						<i className="fab fa-bootstrap" />
 						<h3>Bootstrap</h3>
+					</div>
+					<div className="skillIcon">
+						<i class="fab fa-react" />
+						<h3>React</h3>
+					</div>
+					<div className="skillIcon">
+						<i class="fab fa-node-js" />
+						<h3>Express/Node.js</h3>
+					</div>
+					<div className="skillIcon">
+						<i class="fas fa-leaf" />
+						<h3>MongoDB</h3>
+					</div>
+
+					<div className="skillIcon">
+						<i class="fab fa-git-alt" />
+						<h3>Git</h3>
+					</div>
+					<div className="skillIcon">
+						<i class="fab fa-github" />
+						<h3>GitHub</h3>
+					</div>
+
+					<div className="skillIcon">
+						<i class="fab fa-sass" />
+						<h3>SCSS</h3>
+					</div>
+					<div className="skillIcon">
+						<i class="fab fa-npm" />
+						<h3>Axios</h3>
+					</div>
+					<div className="skillIcon">
+						<i class="fas fa-gem" />
+						<h3>Ruby on Rails</h3>
+					</div>
+					<div className="skillIcon">
+						<i class="fab fa-adobe" />
+						<h3>Adobe Photoshop</h3>
+					</div>
+					<div className="skillIcon">
+						<i class="fab fa-adobe" />
+						<h3>Adobe Illustrator</h3>
+					</div>
+					<div className="skillIcon">
+						<h3>Mongoose</h3>
+					</div>
+					<div className="skillIcon">
+						<h3>Bulma</h3>
+					</div>
+					<div className="skillIcon">
+						<h3>Agile</h3>
+					</div>
+					<div className="skillIcon">
+						<h3>PostgreSQL</h3>
+					</div>
+					<div className="skillIcon">
+						<h3>Heroku</h3>
+					</div>
+					<div className="skillIcon">
+						<h3>Postman</h3>
 					</div>
 				</div>
 			</div>

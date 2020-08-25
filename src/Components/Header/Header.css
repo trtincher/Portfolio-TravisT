@@ -8,9 +8,13 @@ header {
 	padding: 1rem 0;
 }
 
-#headerText {
+.headerText {
 	padding: 1rem;
 	line-height: 2rem;
+}
+
+.headerText span {
+	font-weight: bold;
 }
 
 @media only screen and (min-width: 1024px) {

@@ -3,6 +3,7 @@ import './Nav.css';
 
 function Nav() {
 	const [ isOpen, setIsOpen ] = useState(false);
+	const [ isClose, setIsClose ] = useState(false);
 
 	useEffect(() => {
 		handleResize();
@@ -11,11 +12,13 @@ function Nav() {
 
 	const handleNavClick = () => {
 		setIsOpen(!isOpen);
+		setIsClose(!isClose);
 	};
 
 	const handleResize = () => {
 		if (window.innerWidth > 768) {
 			setIsOpen(true);
+			setIsClose(false);
 		} else {
 			setIsOpen(false);
 		}
@@ -37,7 +40,7 @@ function Nav() {
 					<a href="#portfolioContainer">Portfolio</a>
 				</li>
 			</ul>
-			<div className="close" onClick={handleNavClick} />
+			{isClose ? <div className="close" onClick={handleNavClick} /> : null}
 		</div>
 	);
 

@@ -45,10 +45,10 @@ function PortLinks() {
 		return projectsData.map((project) => (
 			<div className="projectCard">
 				<div className="projectAnchorDiv">
-					<a className="projectAnchor" href={project.url}>
+					<a className="projectAnchor" href={project.url} target="_blank">
 						{project.title}
 					</a>
-					<a className="projectLinkIcon" href={project.url}>
+					<a className="projectLinkIcon" href={project.url} target="_blank">
 						<i className="fas fa-external-link-square-alt" />
 					</a>
 				</div>

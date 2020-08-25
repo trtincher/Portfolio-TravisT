@@ -7,7 +7,6 @@ function Portfolio() {
 	return (
 		<div id="portfolioContainer">
 			<h2>Portfolio</h2>
-
 			<PortLinks />
 		</div>
 	);
