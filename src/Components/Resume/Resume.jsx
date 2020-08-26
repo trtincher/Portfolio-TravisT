@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Resume.css';
+import ResumePDF from '../../ResumeFiles/Travis_Tincher_Resume.pdf';
 
 function Resume({ isResume }) {
 	const [ name, setName ] = useState('close');
@@ -19,10 +20,7 @@ function Resume({ isResume }) {
 		<div id="resume" className={name}>
 			<ul>
 				<li>
-					<a
-						href="https://docs.google.com/document/d/1pTE53GfARoxQENDhWKT-X9_loeH5c4iANQr0UcxmQnU/edit?usp=sharing"
-						target="_blank"
-					>
+					<a href={ResumePDF} target="_blank" download="Travis_Tincher_Resume.pdf">
 						Download
 					</a>
 				</li>

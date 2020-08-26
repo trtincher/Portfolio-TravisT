@@ -23,6 +23,12 @@ function Footer() {
 						<i className="fab fa-linkedin" />
 					</a>
 				</li>
+				<li>
+					<div>
+						<i class="fas fa-paper-plane" />
+						<span className="email"> trtincher12@gmail.com</span>
+					</div>
+				</li>
 			</ul>
 		</footer>
 	);

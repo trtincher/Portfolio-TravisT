@@ -26,9 +26,25 @@ footer li {
 	color: #53add7;
 }
 
+footer .email {
+	font-size: 1rem;
+	padding-left: .5rem;
+}
+
 #footerLinks a {
 	text-decoration: none;
 	color: #53add7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#footerLinks div {
+	text-decoration: none;
+	color: #53add7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 footer button {

@@ -48,12 +48,8 @@ function Nav() {
 					<a href="#portfolioContainer">Portfolio</a>
 				</li>
 				<li>
-					<a
-						href="https://docs.google.com/document/d/1pTE53GfARoxQENDhWKT-X9_loeH5c4iANQr0UcxmQnU/edit?usp=sharing"
-						target="_blank"
-					>
-						Resume
-					</a>
+					<a onClick={handleResumeClick}>Resume</a>
+					{isResume ? <Resume isResume={isResume} /> : null}
 				</li>
 			</ul>
 			{isClose ? <div className="close" onClick={handleNavClick} /> : null}
