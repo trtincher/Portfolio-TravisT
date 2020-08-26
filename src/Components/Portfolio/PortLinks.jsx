@@ -4,6 +4,7 @@ import axios from 'axios';
 
 function PortLinks() {
 	const [ projects, setProjects ] = useState([]);
+	const [ description, setDescription ] = useState('closed');
 
 	useEffect(async () => {
 		let data = await getProjects();
@@ -20,6 +21,18 @@ function PortLinks() {
 	//sheetAsJSON is how we will pull the data as JSON (javascript object notation)
 	const sheetAsJSON =
 		'https://spreadsheets.google.com/feeds/list/1FlYxWf-DCBFPt55fm0Hyu5pLr2dgCr2RqA1LKfahF-A/od6/public/values?alt=json';
+
+	const handleDetailsClick = () => {
+		if (description === 'closed') {
+			console.log('opened');
+			setDescription('opened');
+		}
+
+		if (description === 'opened') {
+			console.log('closed');
+			setDescription('closed');
+		}
+	};
 
 	const getProjects = async () => {
 		try {
@@ -41,18 +54,32 @@ function PortLinks() {
 		}
 	};
 
+	const makeProjectDescription = (description) => {
+		return description.split('|').map((line) => <li>- {line}</li>);
+	};
+
 	const makeProjects = (projectsData) => {
 		return projectsData.map((project) => (
 			<div className="projectCard">
 				<div className="projectAnchorDiv">
-					<a className="projectAnchor" href={project.url} target="_blank">
-						{project.title}
-					</a>
-					<a className="projectLinkIcon" href={project.url} target="_blank">
-						<i className="fas fa-external-link-square-alt" />
-					</a>
+					<ul id="projectDescription" className={description}>
+						{makeProjectDescription(project.description)}
+					</ul>
+					<div className="header">
+						<a className="projectAnchor" href={project.url} target="_blank">
+							{project.title}
+						</a>
+						<div className="projectIcons">
+							<div className="projectDetailsIcon" onClick={handleDetailsClick}>
+								<i class="fas fa-info-circle" />
+							</div>
+							<a className="projectLinkIcon" href={project.url} target="_blank">
+								<i className="fas fa-external-link-square-alt" />
+							</a>
+						</div>
+					</div>
 				</div>
-				<h3 className="projectDescription">{project.description}</h3>
+
 				<img className="projectImg" src={project.image} alt="projectimg" />
 			</div>
 		));
