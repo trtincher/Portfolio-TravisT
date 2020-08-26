@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Nav.css';
 
+import Resume from '../Resume/Resume';
+
 function Nav() {
 	const [ isOpen, setIsOpen ] = useState(false);
 	const [ isClose, setIsClose ] = useState(false);
+	const [ isResume, setIsResume ] = useState(false);
 
 	useEffect(() => {
 		handleResize();
@@ -24,6 +27,11 @@ function Nav() {
 		}
 	};
 
+	const handleResumeClick = () => {
+		console.log('resume clicked');
+		setIsResume(!isResume);
+	};
+
 	const navBar = (
 		<div className="navContainer">
 			<ul className={isOpen ? 'navBar' : 'hideNavBar'}>
@@ -38,6 +46,14 @@ function Nav() {
 				</li>
 				<li>
 					<a href="#portfolioContainer">Portfolio</a>
+				</li>
+				<li>
+					<a
+						href="https://docs.google.com/document/d/1pTE53GfARoxQENDhWKT-X9_loeH5c4iANQr0UcxmQnU/edit?usp=sharing"
+						target="_blank"
+					>
+						Resume
+					</a>
 				</li>
 			</ul>
 			{isClose ? <div className="close" onClick={handleNavClick} /> : null}
