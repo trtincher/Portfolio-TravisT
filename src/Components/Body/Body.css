@@ -22,6 +22,7 @@
 	font-size: .8em;
 	padding: .5em .3em;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
@@ -29,6 +30,7 @@
 .skillIcon h3 {
 	font-size: .6em;
 	padding-left: .2em;
+	padding-top: .5em;
 }
 
 .text-box {
