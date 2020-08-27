@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './PortLinks.css';
 import axios from 'axios';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Accordion from 'react-bootstrap/Accordion';
 
 function PortLinks() {
+	const [ data, setData ] = useState([]);
 	const [ projects, setProjects ] = useState([]);
-	const [ description, setDescription ] = useState('closed');
+	const [ isDescription, setIsDescription ] = useState(false);
 
 	useEffect(async () => {
 		let data = await getProjects();
 		console.log('data', data);
+		setData(data);
 		let cards = makeProjects(data);
 		console.log('cards', cards);
 		setProjects(cards);
@@ -23,15 +31,8 @@ function PortLinks() {
 		'https://spreadsheets.google.com/feeds/list/1FlYxWf-DCBFPt55fm0Hyu5pLr2dgCr2RqA1LKfahF-A/od6/public/values?alt=json';
 
 	const handleDetailsClick = () => {
-		if (description === 'closed') {
-			console.log('opened');
-			setDescription('opened');
-		}
-
-		if (description === 'opened') {
-			console.log('closed');
-			setDescription('closed');
-		}
+		console.log('handleDetailsClick');
+		setIsDescription(!isDescription);
 	};
 
 	const getProjects = async () => {
@@ -55,37 +56,48 @@ function PortLinks() {
 	};
 
 	const makeProjectDescription = (description) => {
-		return description.split('|').map((line) => <li>- {line}</li>);
+		return description.split('|').map((line) => <li className="DiscriptionLine">{line}</li>);
 	};
 
 	const makeProjects = (projectsData) => {
 		return projectsData.map((project) => (
-			<div className="projectCard">
-				<div className="projectAnchorDiv">
-					<ul id="projectDescription" className={description}>
-						{makeProjectDescription(project.description)}
-					</ul>
-					<div className="header">
-						<a className="projectAnchor" href={project.url} target="_blank">
-							{project.title}
-						</a>
-						<div className="projectIcons">
-							<div className="projectDetailsIcon" onClick={handleDetailsClick}>
-								<i class="fas fa-info-circle" />
+			<div className="cardDiv">
+				<Accordion>
+					<Card style={{ width: '20rem', margin: '1rem' }}>
+						<div className="cropImg">
+							<Card.Img variant="top" src={`${project.image}`} />
+						</div>
+
+						<div className="header">
+							<div className="headerLeft">
+								<h1>{project.title}</h1>
+								<Accordion.Toggle
+									style={{ background: 'none', color: 'black', border: 'none' }}
+									as={Button}
+									eventKey="0"
+								>
+									<span className="projectInfoIcon">
+										<i class="fas fa-info-circle" />
+									</span>
+								</Accordion.Toggle>
 							</div>
-							<a className="projectLinkIcon" href={project.url} target="_blank">
-								<i className="fas fa-external-link-square-alt" />
+
+							<a class="projectLinkIcon" href={project.url} target="_blank">
+								<i class="fas fa-external-link-alt" />
 							</a>
 						</div>
-					</div>
-				</div>
-
-				<img className="projectImg" src={project.image} alt="projectimg" />
+						<Accordion.Collapse eventKey="0">
+							<Card.Text style={{ fontWeight: 'bold' }}>
+								{makeProjectDescription(project.description)}
+							</Card.Text>
+						</Accordion.Collapse>
+					</Card>
+				</Accordion>
 			</div>
 		));
 	};
 
-	return <div className="PortLinks">{projects}</div>;
+	return <div className="projectsContainer">{projects}</div>;
 }
 
 export default PortLinks;

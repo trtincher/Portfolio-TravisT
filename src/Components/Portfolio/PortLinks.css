@@ -1,111 +1,54 @@
-.projectCard {
-	position: relative;
-	width: 15rem;
-	height: 20rem;
+.projectsContainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cardDiv {
+	margin: auto;
+}
+
+.cropImg {
+	height: 200px;
 	overflow: hidden;
-	padding: 2rem;
-	margin: 1rem auto;
-	background-color: white;
-	border-radius: .2rem;
 }
 
-.projectImg {
-	position: relative;
-	width: 200%;
-	left: -2rem;
-	top: -3rem;
-	z-index: 0;
+.DiscriptionLine {
+	line-height: 1.8rem;
 }
 
-.projectAnchorDiv {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	/* height: 30%; */
-	z-index: 1;
-	background-color: whitesmoke;
-}
-
-#projectDescription {
-	text-align: left;
-	padding-bottom: 1rem;
-	padding-right: 1rem;
-	border-bottom: 1px solid grey;
-}
-
-#projectDescription li {
-	font-size: 1.1rem;
-	padding: .5rem;
-}
-
-.closed {
-	position: relative;
-	left: -1000px;
-	height: 0;
-}
-
-.opened {
-	text-align: left;
-	padding-bottom: 1rem;
-	padding-right: 1rem;
-	border-bottom: 1px solid grey;
+.projectTitle {
+	font-size: 1.5rem;
 }
 
 .header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-bottom: 1rem;
-}
-
-.projectAnchor {
-	color: black;
-	text-decoration: none;
-	font-size: 2rem;
-	padding-left: 1rem;
-}
-
-.projectDescription {
-	color: black;
 	font-size: 1rem;
 }
 
-.projectIcons {
-	display: flex;
-}
-
-.projectDetailsIcon {
-	color: black;
-	font-size: 3rem;
-	padding-right: 1.2rem;
+.header h1 {
+	font-size: 2rem;
 }
 
 .projectLinkIcon {
 	color: black;
-	font-size: 3rem;
-	padding-right: 1rem;
+	font-size: 2rem;
+	padding-right: .5rem;
 }
 
-.PortLinks {
-	background-color: #53add7;
+.projectInfoIcon {
+	color: black;
+	font-size: 2rem;
+}
+
+.headerLeft {
 	display: flex;
-	flex-direction: column;
-	margin-bottom: 5rem;
+	align-items: center;
+	padding-left: .5rem;
 }
 
 @media only screen and (min-width: 768px) {
-	.projectDetailsIcon {
-		color: rgba(0, 0, 0, .7);
-		transition: all 500ms ease;
-	}
-
-	.projectDetailsIcon:hover {
-		color: rgba(0, 0, 0, 1);
-		transition: 300ms ease;
-		font-size: 4.5rem;
-	}
-
 	.projectLinkIcon {
 		color: rgba(0, 0, 0, .7);
 		transition: all 500ms ease;
@@ -115,12 +58,18 @@
 		color: rgba(0, 0, 0, 1);
 
 		transition: 300ms ease;
-		font-size: 4.5rem;
+		font-size: 2.2rem;
 	}
 
-	.PortLinks {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
+	.projectInfoIcon {
+		color: rgba(0, 0, 0, .7);
+		transition: all 500ms ease;
+	}
+
+	.projectInfoIcon:hover {
+		color: rgba(0, 0, 0, 1);
+
+		transition: 300ms ease;
+		font-size: 2.2rem;
 	}
 }
