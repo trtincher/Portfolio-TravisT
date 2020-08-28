@@ -146,7 +146,11 @@ nav a {
 		background-color: transparent;
 	}
 
-	nav button {
+	.hamburger {
+		display: none;
+	}
+
+	.times {
 		display: none;
 	}
 
