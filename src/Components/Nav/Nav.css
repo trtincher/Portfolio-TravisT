@@ -63,7 +63,14 @@ nav {
 }
 
 .times {
-	margin-top: 1.5rem;
+	margin-top: 2rem;
+	position: fixed;
+	background: none;
+	margin: 1rem;
+	outline: 0;
+	border: none;
+	z-index: 100;
+	transition: all 500ms ease;
 }
 
 .crossMid {
@@ -91,12 +98,12 @@ nav {
 	transition: all 700ms ease;
 }
 
-nav button {
+.hamburger {
 	position: fixed;
-	background-color: transparent;
+	background: none;
 	margin: 1rem;
 	outline: 0;
-	border: 0;
+	border: none;
 	z-index: 100;
 	transition: all 500ms ease;
 }

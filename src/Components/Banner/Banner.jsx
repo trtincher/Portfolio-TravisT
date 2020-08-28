@@ -5,8 +5,8 @@ function Banner() {
 	return (
 		<div id="banner">
 			<h1>
-				A person doesn’t have to know how a beer is brewed to know they are going to like it. They are intrigued
-				by the label and convinced by the first sip. The same should be true of any software user experience.
+				A software user experience should be like trying a new craft beer. You are intrigued by the label,
+				convince by the first sip, and left wanting more.
 			</h1>
 		</div>
 	);

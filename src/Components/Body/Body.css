@@ -93,6 +93,7 @@
 
 	#fillerImg2 img {
 		position: absolute;
-		width: 150%;
+		width: 200%;
+		left: -150px;
 	}
 }

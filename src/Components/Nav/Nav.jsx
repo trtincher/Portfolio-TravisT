@@ -57,19 +57,19 @@ function Nav() {
 	);
 
 	const hamburger = (
-		<button className="hamburger" onClick={handleNavClick}>
+		<div className="hamburger" onClick={handleNavClick}>
 			<span />
 			<span />
 			<span />
-		</button>
+		</div>
 	);
 
 	const times = (
-		<button className="times" onClick={handleNavClick}>
+		<div className="times" onClick={handleNavClick}>
 			<span className="crossTop" />
 			<span className="crossMid" />
 			<span className="crossBottom" />
-		</button>
+		</div>
 	);
 
 	return (

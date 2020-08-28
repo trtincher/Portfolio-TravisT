@@ -45,7 +45,8 @@ function PortLinks() {
 					title: project.gsx$title.$t,
 					description: project.gsx$description.$t,
 					image: project.gsx$image.$t,
-					url: project.gsx$url.$t
+					url: project.gsx$url.$t,
+					github: project.gsx$github.$t
 				};
 			});
 
@@ -63,7 +64,7 @@ function PortLinks() {
 		return projectsData.map((project) => (
 			<div className="cardDiv">
 				<Accordion>
-					<Card style={{ width: '20rem', margin: '1rem' }}>
+					<Card style={{ width: '25rem', margin: '1rem' }}>
 						<div className="cropImg">
 							<Card.Img variant="top" src={`${project.image}`} />
 						</div>
@@ -87,8 +88,12 @@ function PortLinks() {
 							</a>
 						</div>
 						<Accordion.Collapse eventKey="0">
-							<Card.Text style={{ fontWeight: 'bold' }}>
+							<Card.Text style={{ fontWeight: 'bold', padding: '.5rem' }}>
 								{makeProjectDescription(project.description)}
+								<a class="projectLinkIcon" href={project.github} target="_blank">
+									<i class="fab fa-github-square" />
+									<h1>{project.github}</h1>
+								</a>
 							</Card.Text>
 						</Accordion.Collapse>
 					</Card>
