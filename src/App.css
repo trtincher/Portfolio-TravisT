@@ -1,8 +1,9 @@
 .App {
-	font-size: 15px;
-	font-family: 'Noto Sans JP', sans-serif;
-	padding-top: 5rem;
-	width: 100vw;
-	background: url('https://i.imgur.com/n1J1qOw.png');
-	background-size: cover;
+  font-size: 15px;
+  font-family: "Noto Sans JP", sans-serif;
+  padding-top: 5rem;
+  width: 100vw;
+  background: url("https://i.imgur.com/n1J1qOw.png");
+  background-size: cover;
+  background-position: 0 -20px;
 }
