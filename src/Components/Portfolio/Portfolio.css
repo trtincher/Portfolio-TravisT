@@ -1,13 +1,14 @@
 #portfolioContainer {
-	background: #53add7;
-	padding-bottom: 100px;
+  background: #53add7;
+  padding-bottom: 100px;
+  width: 100%;
 }
 
 #portfolioContainer h2 {
-	font-size: 1.5rem;
-	text-align: center;
-	padding: 2rem;
-	background-color: white;
-	font-family: 'Roboto', sans-serif;
-	border-top: .5rem solid #53add7;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  border-top: 0.5rem solid #53add7;
 }

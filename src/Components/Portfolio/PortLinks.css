@@ -1,86 +1,93 @@
 .projectsContainer {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .cardDiv {
-	margin: auto;
+  margin: auto;
+  width: 80%;
 }
 
 .cropImg {
-	height: 200px;
-	overflow: scroll;
+  height: 200px;
+  overflow: scroll;
 }
 
 .DiscriptionLine {
-	line-height: 1.8rem;
+  line-height: 1.8rem;
 }
 
 .projectTitle {
-	font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
 }
 
 .header h1 {
-	font-size: 2rem;
+  font-size: 2rem;
 }
 
 .projectLinkIcon {
-	color: black;
-	font-size: 2rem;
-	padding-right: .5rem;
-	display: flex;
-	align-items: center;
+  color: black;
+  font-size: 2rem;
+  padding-right: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .projectLinkIcon i {
-	padding-left: .5rem;
+  padding-left: 0.5rem;
 }
 
 .projectLinkIcon h1 {
-	font-size: 1rem;
-	padding-left: .5rem;
+  font-size: 1rem;
+  padding-left: 0.5rem;
 }
 
 .projectInfoIcon {
-	color: black;
-	font-size: 2rem;
+  color: black;
+  font-size: 2rem;
 }
 
 .headerLeft {
-	display: flex;
-	align-items: center;
-	padding-left: .5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
 }
 
 @media only screen and (min-width: 768px) {
-	.projectLinkIcon {
-		color: rgba(0, 0, 0, .7);
-		transition: all 500ms ease;
-	}
+  .cardDiv {
+    margin: auto;
+    width: 40%;
+  }
 
-	.projectLinkIcon:hover {
-		color: rgba(0, 0, 0, 1);
+  .projectLinkIcon {
+    color: rgba(0, 0, 0, 0.7);
+    transition: all 500ms ease;
+  }
 
-		transition: 300ms ease;
-		font-size: 2.2rem;
-	}
+  .projectLinkIcon:hover {
+    color: rgba(0, 0, 0, 1);
 
-	.projectInfoIcon {
-		color: rgba(0, 0, 0, .7);
-		transition: all 500ms ease;
-	}
+    transition: 300ms ease;
+    font-size: 2.2rem;
+  }
 
-	.projectInfoIcon:hover {
-		color: rgba(0, 0, 0, 1);
+  .projectInfoIcon {
+    color: rgba(0, 0, 0, 0.7);
+    transition: all 500ms ease;
+  }
 
-		transition: 300ms ease;
-		font-size: 2.2rem;
-	}
+  .projectInfoIcon:hover {
+    color: rgba(0, 0, 0, 1);
+
+    transition: 300ms ease;
+    font-size: 2.2rem;
+  }
 }
